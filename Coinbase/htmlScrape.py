@@ -28,6 +28,9 @@ df = pd.DataFrame(pairs, columns=['Venture', 'Description'])
 # Add a new column 'Parent' with the value 'Coinbase'
 df.insert(0, 'Parent', 'Coinbase')
 
+# Add a new column 'Parent' with the value 'Coinbase'
+df.insert(3, 'Link', '')
+
 # Export the dataframe to a CSV file
 df.to_csv('CoinbaseVentures.csv', index=False)
 
