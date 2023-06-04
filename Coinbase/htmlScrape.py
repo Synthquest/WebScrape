@@ -16,20 +16,20 @@ pairs = []
 for div in interactable_divs:
     title_element = div.find(class_="Text-sc-1ytabpv-0 ktFOpz")
     description_element = div.find(class_="Text-sc-1ytabpv-0 ktYgkv")
-
+    href = div.get("href")
+    # print(href)
     if title_element and description_element:
         title = title_element.get_text(strip=True)
         description = description_element.get_text(strip=True)
-        pairs.append([title, description])
+        link = href
+        pairs.append([title, description, link])
 
 # Create a dataframe from the pairs list
-df = pd.DataFrame(pairs, columns=['Venture', 'Description'])
+df = pd.DataFrame(pairs, columns=['Venture', 'Description', 'Link'])
 
 # Add a new column 'Parent' with the value 'Coinbase'
 df.insert(0, 'Parent', 'Coinbase')
 
-# Add a new column 'Parent' with the value 'Coinbase'
-df.insert(3, 'Link', '')
 
 # Export the dataframe to a CSV file
 df.to_csv('CoinbaseVentures.csv', index=False)
