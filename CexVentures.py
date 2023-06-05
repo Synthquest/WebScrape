@@ -10,7 +10,7 @@ coinbase_df = pd.read_csv('Coinbase/CoinbaseVentures.csv')
 dcg_df = pd.read_csv('DCG/DCGVentures.csv')
 
 # Read DCGVentures.csv from the Coinbase folder
-a16z_df = pd.read_csv('a16z/a16zVentures.csv')
+a16z_df = pd.read_csv('a16z/Mergeda16zVentures.csv')
 
 # Combine the DataFrames
 combined_df = pd.concat([binance_df, coinbase_df, dcg_df, a16z_df], ignore_index=True)
