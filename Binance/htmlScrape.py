@@ -18,7 +18,7 @@ urls = [div.find('a')['href'] for div in div_elements]
 split_urls = []
 
 for url in urls:
-    url_parts = url.replace("https://", "").replace("www.", "").replace("http://", "").split(".")  # Remove "https://" and "www." and split by "."
+    url_parts = url.replace("https://", "").replace("www.", "").replace("http://", "").replace("app.", "").split(".")  # Remove "https://" and "www." and split by "."
     url_parts = [part.rstrip('/') if part.endswith('/') else part for part in url_parts]  # Remove trailing "/" if present
     url_parts = [part for part in url_parts if part not in ("com", "io", "xyz", "cc")]  # Remove unwanted parts
     split_urls.append(url_parts[0]) # Add only the URL body

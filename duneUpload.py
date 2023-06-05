@@ -24,11 +24,10 @@ with open(csv_file_path, encoding='utf-8') as open_file:
 
     payload = {
         "table_name": "CEX Ventures",
-        "description": "CEX ventures & links - maintained: https://github.com/Synthquest/WebScrape",
+        "description": "CEX ventures + links - maintained: https://github.com/Synthquest/WebScrape",
         "data": str(data)
     }
     
     response = requests.post(url, data=json.dumps(payload), headers=headers)
-
     print('Response status code:', response.status_code)
     print('Response content:', response.content)

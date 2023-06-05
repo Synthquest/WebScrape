@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Read BinanceVentures.csv from the Binance folder
-binance_df = pd.read_csv('Binance/BinanceVentures.csv')
+binance_df = pd.read_csv('Binance/MergedBinanceVentures.csv')
 
 # Read CoinbaseVentures.csv from the Coinbase folder
 coinbase_df = pd.read_csv('Coinbase/CoinbaseVentures.csv')
